@@ -1,15 +1,17 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 header {
     width: 960px;
     margin: 0 auto;
 }
 
+/* Centra il contenuto di header e nav */
 nav {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
     text-align: center;
@@ -17,7 +19,7 @@ nav {
 
 nav div {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 ul {
@@ -29,17 +31,30 @@ li {
     margin: 10px;
 }
 
-#title {
-    display: flex;
-    justify-content: center;
+h1 {
+    width: 100%;
+    text-align: center;
+    /* Centra il testo all'interno di h1 */
+    margin: 0;
 }
 
-@media (min-width:768px) {
-    main {
-        margin: 0 auto;
+@media (min-width: 960px){
+    header {
         width: 960px;
+    }
+
+    nav {
+        width: 960px;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    main {
+        width: 960px;
+        margin: 0 auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: nowrap;
     }
 
@@ -51,17 +66,83 @@ li {
         flex-wrap: none;
     }
 
+    h1 {
+        display: flex;
+        justify-content: center;
+        width: 960px;
+    }
+    
 }
 
-@media (max-width:700px) {
+/* Media query per schermi più grandi di 768px */
+@media (min-width: 700px) and (max-width: 960px){
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
     main {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    footer {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: none;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Media query per schermi più piccoli di 700px */
+@media (min-width: 0px) and (max-width: 700px) {
+
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: left;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
 
-    footer {
+    h1 {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 }
 
@@ -69,7 +150,6 @@ article {
     width: 300px;
     background-color: white;
 }
-
 
 figure {
     width: 100%;
@@ -99,10 +179,8 @@ img {
     background-color: rgb(93, 143, 251);
 }
 
-
 a {
     text-decoration: none;
-
 }
 
 section {
